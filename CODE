@@ -1,7 +1,91 @@
 import sqlite3
 import re
 import hashlib
+import sqlite3
 
+def create_connection(db_file):
+    """ Create a database connection to the SQLite database """
+    conn = None
+    try:
+        conn = sqlite3.connect(db_file)
+    except Exception as e:
+        print(e)
+    return conn
+
+def create_table(conn):
+    """ Create a table for the students """
+    try:
+        sql_create_students_table = """ CREATE TABLE IF NOT EXISTS students (
+                                            id integer PRIMARY KEY,
+                                            name text NOT NULL,
+                                            email text NOT NULL,
+                                            degree text
+                                        ); """
+        cursor = conn.cursor()
+        cursor.execute(sql_create_students_table)
+    except Exception as e:
+        print(e)
+
+def insert_student(conn, student):
+    """ Insert a new student into the students table """
+    sql = ''' INSERT INTO students(name,email,degree)
+              VALUES(?,?,?) '''
+    cur = conn.cursor()
+    cur.execute(sql, student)
+    conn.commit()
+    return cur.lastrowid
+
+def get_head_of_data(conn, number_of_rows=5):
+    """ Retrieve the first few rows of the students table """
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM students LIMIT ?", (number_of_rows,))
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+
+def get_table_info(conn):
+    """ Retrieve information about the students table """
+    cur = conn.cursor()
+    cur.execute("PRAGMA table_info(students)")
+    info = cur.fetchall()
+    for col in info:
+        print(col)
+
+def main():
+    database = "uniE_share.db"
+
+    # Create a database connection
+    conn = create_connection(database)
+
+    # Create students table
+    if conn is not None:
+        create_table(conn)
+
+        # Sample student data
+        students = [
+            ("Alice Smith", "alice.ieu2023@student.ie.edu", "BBA BDA"),
+            ("Bob Johnson", "bob.ieu2022@student.ie.edu", "BBA BDA"),
+            ("Charlie Brown", "charlie.ieu2021@student.ie.edu", "Engineering"),
+            ("Daisy Ridley", "daisy.ieu2024@student.ie.edu", "BBA BDA"),
+            ("Evan Peters", "evan.peters@student.ie.edu", "BBA BDA"),
+            ("Fiona Gallagher", "fiona.2025@student.ie.edu", "BBA BDA"),
+            ("George Lucas", "george.arts2023@student.ie.edu", "Arts")
+        ]
+
+        # Insert students
+        for student in students:
+            insert_student(conn, student)
+
+        print("Students data inserted successfully.")
+
+    else:
+        print("Error! cannot create the database connection.")
+
+    conn.close()
+
+if __name__ == '__main__':
+    main()
+    
 def create_connection(db_file):
     """ Create a database connection to the SQLite database. """
     conn = None
