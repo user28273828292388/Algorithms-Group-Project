@@ -1,72 +1,4 @@
 import sqlite3
-
-def create_connection(db_file):
-    """ Create a database connection to the SQLite database """
-    conn = None
-    try:
-        conn = sqlite3.connect(db_file)
-    except Exception as e:
-        print(e)
-    return conn
-
-def create_table(conn):
-    """ Create a table for the students """
-    try:
-        sql_create_students_table = """ CREATE TABLE IF NOT EXISTS students (
-                                            id integer PRIMARY KEY,
-                                            name text NOT NULL,
-                                            email text NOT NULL,
-                                            degree text
-                                        ); """
-        cursor = conn.cursor()
-        cursor.execute(sql_create_students_table)
-    except Exception as e:
-        print(e)
-
-def insert_student(conn, student):
-    """ Insert a new student into the students table """
-    sql = ''' INSERT INTO students(name,email,degree)
-              VALUES(?,?,?) '''
-    cur = conn.cursor()
-    cur.execute(sql, student)
-    conn.commit()
-    return cur.lastrowid
-
-def main():
-    database = "uniE_share.db"
-
-    # Create a database connection
-    conn = create_connection(database)
-
-    # Create students table
-    if conn is not None:
-        create_table(conn)
-
-        # Sample student data
-        students = [
-            ("Alice Smith", "alice.ieu2023@student.ie.edu", "BBA BDA"),
-            ("Bob Johnson", "bob.ieu2022@student.ie.edu", "BBA BDA"),
-            ("Charlie Brown", "charlie.ieu2021@student.ie.edu", "Engineering"),
-            ("Daisy Ridley", "daisy.ieu2024@student.ie.edu", "BBA BDA"),
-            ("Evan Peters", "evan.peters@student.ie.edu", "BBA BDA"),
-            ("Fiona Gallagher", "fiona.2025@student.ie.edu", "BBA BDA"),
-            ("George Lucas", "george.arts2023@student.ie.edu", "Arts")
-        ]
-
-        # Insert students
-        for student in students:
-            insert_student(conn, student)
-
-        print("Students data inserted successfully.")
-    else:
-        print("Error! cannot create the database connection.")
-
-    conn.close()
-
-if __name__ == '__main__':
-    main()
-
-import sqlite3
 import re
 import hashlib
 
@@ -168,64 +100,7 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-class Subject:
-    def __init__(self, name, resources):
-        self.name = name
-        self.resources = resources
-
-    def display_resources(self):
-        print(f"Resources for {self.name}:")
-        for resource in self.resources:
-            print(resource)
-
-def create_sorted_subjects():
-    subjects = [
-        Subject("Algorithms and Data Structures", ["Resource 9", "Resource 10"]),
-        Subject("Building Powerful Relationships", ["Resource 7", "Resource 8"]),
-        Subject("Mathematics for Data Management and Analysis", ["Resource 3", "Resource 4"]),
-        Subject("Probability and Statistics", ["Resource 5", "Resource 6"]),
-        Subject("Programming for Data Management and Analysis", ["Resource 1", "Resource 2"]),
-        Subject("Technology", ["Resource 11", "Resource 12"]),
-    ]
-    return subjects
-
-def binary_search_subjects(subjects, query):
-    low = 0
-    high = len(subjects) - 1
-
-    while low <= high:
-        mid = (low + high) // 2
-        if subjects[mid].name.lower() == query.lower():
-            return subjects[mid]
-        elif subjects[mid].name.lower() < query.lower():
-            low = mid + 1
-        else:
-            high = mid - 1
-
-    return None
-
-def main():
-    subjects = create_sorted_subjects()
-
-    while True:
-        query = input("Enter a subject to search, or 'exit' to quit: ").lower()
-        if query == 'exit':
-            print("Exiting the application.")
-            break
-
-        subject = binary_search_subjects(subjects, query)
-        if subject:
-            subject.display_resources()
-            print("Redirecting to the home page...")
-            # In a real app, here you would redirect to the home page
-            break
-        else:
-            print("Subject not found. Please try again.")
-
-if __name__ == '__main__':
-    main()
-
+    
 class Material:
     def __init__(self, name):
         self.name = name
@@ -249,7 +124,19 @@ class Subject:
 
     def find_material(self, material_type, material_name):
         materials = getattr(self, material_type)
-        return next((m for m in materials if m.name.lower() == material_name.lower()), None)
+        low, high = 0, len(materials) - 1
+
+        while low <= high:
+            mid = (low + high) // 2
+            mid_material_name = materials[mid].name.lower()
+
+            if mid_material_name < material_name.lower():
+                low = mid + 1
+            elif mid_material_name > material_name.lower():
+                high = mid - 1
+            else:
+                return materials[mid]
+        return None
 
 class App:
     def __init__(self):
@@ -337,4 +224,3 @@ class App:
 if __name__ == '__main__':
     app = App()
     app.run()
-
