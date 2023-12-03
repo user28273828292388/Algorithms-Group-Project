@@ -20,13 +20,10 @@ Step 5: Select the option " add README in your repository"
 
 HOW TO USE OUR APP:
 
-DOWNLOADING OUR GITHUB CODE TO PYTHON:
+INSERT OUR GITHUB CODE TO PYTHON:
 
-- At the top of the GitHub repository, the user will find a green icon that displays “<> Code”.
-
-- The user should click on the green icon and select the option that says “Download Zip”. Then the user is able to access the project's files.
-
-- Open the CODE document in python.
+- Go to our CODE file in github and copy all code using "Ctrl z"
+- Plug in the code in a python coding cell, then run the cell.
 
 
 PYTHON STEPS:
