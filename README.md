@@ -1,15 +1,15 @@
-DESCRIPTION:
+**DESCRIPTION:**
 
 UniE share which is an app used to target a recurrent difficulty many students have to face on a daily basis consists of the lack of educational resources available to them, generating an ongoing educational gap. Considering this reality, the UNIe-Share App arrives with the ultimate purpose of closing this educational gap and providing the necessary tools so that any student can maximise their potential. It gives students several opportunities to study from textbooks, notes, exercises and tests. What is also ideal is that students also have the option to post and help others. 
 
 
-TABLE OF CONTENTS:
+**TABLE OF CONTENTS:**
 - How to create a github repository. 
 - How to use the app. 
 - Credits. 
 
 
-HOW TO CREATE A GITHUB REPOSITORY:
+**HOW TO CREATE A GITHUB REPOSITORY:**
 
 
 Step 1: First you need to sign-up on Git-hub and create and account.
@@ -23,15 +23,18 @@ Step 4: Optionally add a description to the repository. (Our introduction is our
 Step 5: Select the option " add README in your repository"
 
 
-HOW TO USE OUR APP:
 
-INSERT OUR GITHUB CODE TO PYTHON:
+**HOW TO USE OUR APP:**
+
+
+
+**INSERT OUR GITHUB CODE TO PYTHON:**
 
 - Go to our CODE file in github and copy all code using "Ctrl z"
 - Plug in the code in a python coding cell, then run the cell.
 
 
-Instructions to run UniE app:
+**Instructions to run UniE app:**
 
 STEP 1: The user will be asked to enter a valid ie student email address (XXXX.ieu20XX@student.ie.edu)
 
@@ -45,14 +48,14 @@ STEP 5: Congratulations you have successfully created your account.
 
 
 
-INSERT OUR GITHUB CODE TO PYTHON:
+**INSERT OUR GITHUB CODE TO PYTHON:**
 
 - Go to our CODE file in github and copy all code using "Ctrl z"
 - Plug in the code in a python coding cell, then run the cell.
 
 
 
-START SEARCHING: 
+**START SEARCHING:**
 
 1. The user will be asked to enter the chosen subject to study:
 
@@ -106,11 +109,11 @@ START SEARCHING:
 
 			1.In case the answer is no the user should enter “exit” two times in order to close our application. 
 
-Credits: 
+**CREDITS:**
 
 The app has been done with much effort by all our team members, trying everyday to develop feasible and efficient solutions to improve study for students. Note that the app is still in development and the current version only has the blueprint of what it could be. Thank you so much for your participation!
 
-Members:
+**MEMBERS:**
 
 Antonio Leyva
 
