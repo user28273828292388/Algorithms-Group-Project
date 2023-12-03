@@ -1,7 +1,12 @@
 DESCRIPTION:
 
+UniE share which is an app used to target a recurrent difficulty many students have to face on a daily basis consists of the lack of educational resources available to them, generating an ongoing educational gap. Considering this reality, the UNIe-Share App arrives with the ultimate purpose of closing this educational gap and providing the necessary tools so that any student can maximise their potential. It gives students several opportunities to study from textbooks, notes, exercises and tests. What is also ideal is that students also have the option to post and help others. 
 
-UniE share which isan app used to target a  recurrent difficulty many students have to face on a daily basis consists of the lack of educational resources available to them, generating an ongoing educational gap. Considering this reality, the UNIe-Share App arrives with the ultimate purpose of closing this educational gap and providing the necessary tools so that any student can maximise their potential. 
+
+TABLE OF CONTENTS:
+- How to create a github repository. 
+- How to use the app. 
+- Credits. 
 
 
 HOW TO CREATE A GITHUB REPOSITORY:
@@ -26,11 +31,102 @@ INSERT OUR GITHUB CODE TO PYTHON:
 - Plug in the code in a python coding cell, then run the cell.
 
 
-PYTHON STEPS:
+Instructions to run UniE app:
 
-1 step: In the app there will be a page to sign up where only students that fit the Ie university email with the format  XXXX.ieu20XX@student.ie.edu (in the XXX there will be the variable information that changes from student to student)  be able to enter and ones that match with the degree BBA BDA. 
+STEP 1: The user will be asked to enter a valid ie student email address (XXXX.ieu20XX@student.ie.edu)
 
-2 step: On the second page of the app they will have a search engine where they will have a list of several subjects (programming for data management and analysis, mathematics for data management and analysis, probability and statistics, building powerful relationships, algorithms and data structures and technology), once the student has chosen a subject it will be redirected to another page where there are four options, textbooks, notes, past exams and exercises. 
+STEP 2: The user will be asked to enter their degree.
 
-3 step: Once the student has chosen an option for example textbooks there will be displayed several options for example textbook 1, textbook 2 and textbook three. In case the student wants to post something there should be an option to post. 
+STEP 3: The user will be asked to create a password.
+
+STEP 4: The user will be asked to re enter their created password.
+
+STEP 5: Congratulations you have successfully created your account.
+
+
+
+INSERT OUR GITHUB CODE TO PYTHON:
+
+- Go to our CODE file in github and copy all code using "Ctrl z"
+- Plug in the code in a python coding cell, then run the cell.
+
+
+
+START SEARCHING: 
+
+1. The user will be asked to enter the chosen subject to study:
+
+		Options available are:
+
+		Programming
+
+		Mathematics
+
+		Statistics
+
+		Relationships
+
+		Algorithms
+
+		Technology
+
+2. The user will be asked to choose what type of material they want:
+   
+		Options available are:
+
+		Textbooks
+
+		Tests
+
+		Exercises
+
+		Notes
+
+3. The user will be asked to select which option  of the chosen material they want:
+
+		Options available are:
+		
+		Textbook 1, textbook 2, textbook 3
+		
+		Test 1, test 2 , test 3
+		
+		Exercise 1, exercise 2, exercise 3
+		
+		Note 1, note 2, note 3
+
+4. After this the user will be finally asked if they want to post new material:
+		Options available are:
+
+		Yes
+
+			1.In case the answer is yes the user will be asked which type of material they want to enter, the options being (textbooks, tests, exercise, notes).
+			2.Then they will be asked to name the material 
+			3.After this the user should enter “exit” two times in order to close out of our application.
+		No
+
+			1.In case the answer is no the user should enter “exit” two times in order to close our application. 
+
+Credits: 
+
+The app has been done with much effort by all our team members, trying everyday to develop feasible and efficient solutions to improve study for students. Note that the app is still in development and the current version only has the blueprint of what it could be. Thank you so much for your participation!
+
+Members:
+
+Antonio Leyva
+
+Javier Comín
+
+Jaime Fernandez
+
+Julian Consuegra
+
+Ignacio Fierro
+
+Nelson Olmedillo
+
+Ainhoa Olaechea
+
+
+
+
 
