@@ -20,7 +20,16 @@ Step 5: Select the option " add README in your repository"
 
 HOW TO USE OUR APP:
 
-Before starting: On this github open code folder and download the code on python.
+DOWNLOADING OUR GITHUB CODE TO PYTHON:
+
+- At the top of the GitHub repository, the user will find a green icon that displays “<> Code”.
+
+- The user should click on the green icon and select the option that says “Download Zip”. Then the user is able to access the project's files.
+
+- Open the CODE document in python.
+
+
+PYTHON STEPS:
 
 1 step: In the app there will be a page to sign up where only students that fit the Ie university email with the format  XXXX.ieu20XX@student.ie.edu (in the XXX there will be the variable information that changes from student to student)  be able to enter and ones that match with the degree BBA BDA. 
 
