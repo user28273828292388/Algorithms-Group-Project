@@ -1,5 +1,3 @@
-Below there is a data set created with students who wish to join the app 
-#%%
 import sqlite3
 
 def create_connection(db_file):
@@ -68,13 +66,6 @@ def main():
 if __name__ == '__main__':
     main()
 
-#%% md
-Run the Script: This script can be executed in a Python environment. It will create a SQLite database named uniE_share.db and populate it with the sample student data.
-Database Structure: The database contains a table students with columns for id, name, email, and degree.
-Sample Data: The script includes a mix of students, some meeting the criteria (email format and degree) and some not.
-#%% md
-Code for the user interface
-#%%
 import sqlite3
 import re
 import hashlib
@@ -178,15 +169,6 @@ def main():
 if __name__ == '__main__':
     main()
 
-#%%
-
-#%% md
-Password Creation: Users are prompted to create a password and confirm it.
-Password Confirmation: The script ensures the confirmed password matches the initial one.
-Hash Table Storage: User data, including hashed passwords, is stored in a dictionary (a form of hash table).
-#%% md
-Below there is a code for the search page 
-#%%
 class Subject:
     def __init__(self, name, resources):
         self.name = name
@@ -244,17 +226,6 @@ def main():
 if __name__ == '__main__':
     main()
 
-#%% md
-Subject Class: Represents each subject with a name and a list of resources.
-Create Subjects: Initializes available subjects. This can be expanded or modified as needed.
-Search Function: Allows users to search for subjects. It uses a dictionary (hash table) for efficient lookup.
-User Interaction: Users can search for subjects. If the subject is found, its resources are displayed, and the user is prompted to the home page.
-The subjects are stored in a sorted list.
-The binary_search_subjects function implements binary search to find a subject based on the user's query.
-The search is case-insensitive for user convenience.
-#%% md
-Below there is the code for once the search has been done 
-#%%
 class Material:
     def __init__(self, name):
         self.name = name
@@ -366,10 +337,4 @@ class App:
 if __name__ == '__main__':
     app = App()
     app.run()
-
-#%% md
-Material Class: Represents individual materials (textbook, test, exercise, note).
-Subject Class: Represents a subject, with methods to add and display materials.
-App Class: The main application class that orchestrates the user interaction and manages subjects.
-User Interaction: The user can search for subjects, view materials, and post new materials.
 
