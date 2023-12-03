@@ -1,15 +1,17 @@
-**DESCRIPTION:**
+# UniE Share App
+
+# Description:
 
 UniE share which is an app used to target a recurrent difficulty many students have to face on a daily basis consists of the lack of educational resources available to them, generating an ongoing educational gap. Considering this reality, the UNIe-Share App arrives with the ultimate purpose of closing this educational gap and providing the necessary tools so that any student can maximise their potential. It gives students several opportunities to study from textbooks, notes, exercises and tests. What is also ideal is that students also have the option to post and help others. 
 
 
-**TABLE OF CONTENTS:**
+# Table of contents:
 - How to create a github repository. 
 - How to use the app. 
 - Credits. 
 
 
-**HOW TO CREATE A GITHUB REPOSITORY:**
+# How to create a github repository:
 
 
 Step 1: First you need to sign-up on Git-hub and create and account.
@@ -24,11 +26,11 @@ Step 5: Select the option " add README in your repository"
 
 
 
-**HOW TO USE OUR APP:**
+# How to use the app:
 
 
 
-**INSERT OUR GITHUB CODE TO PYTHON:**
+**Insert github code to python**
 
 - Go to our CODE file in github and copy all code using "Ctrl z"
 - Plug in the code in a python coding cell, then run the cell.
@@ -48,14 +50,7 @@ STEP 5: Congratulations you have successfully created your account.
 
 
 
-**INSERT OUR GITHUB CODE TO PYTHON:**
-
-- Go to our CODE file in github and copy all code using "Ctrl z"
-- Plug in the code in a python coding cell, then run the cell.
-
-
-
-**START SEARCHING:**
+**Start searching:**
 
 1. The user will be asked to enter the chosen subject to study:
 
@@ -109,11 +104,11 @@ STEP 5: Congratulations you have successfully created your account.
 
 			1.In case the answer is no the user should enter “exit” two times in order to close our application. 
 
-**CREDITS:**
+# Credits
 
 The app has been done with much effort by all our team members, trying everyday to develop feasible and efficient solutions to improve study for students. Note that the app is still in development and the current version only has the blueprint of what it could be. Thank you so much for your participation!
 
-**MEMBERS:**
+# Members
 
 Antonio Leyva
 
